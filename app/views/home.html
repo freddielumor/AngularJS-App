@@ -1,0 +1,11 @@
+<div id="home.html" ng-repeat="movie in movies" class="col-sm col-lg-3 col-md-6">
+	<div class="thumbnail">
+		<img class="poster" src="" ng-src={{movie.image}}>
+		<div class="caption text-center">
+			<h4>{{movie.name}}</h4>
+			<p>
+				<a ng-click="buy(movie)" class="btn btn-primary" role="button">Buy - {{movie.buy | currency:"$":0}}</a>
+				<a ng-click="rent(movie)" class="btn btn-default" role="button">Rent - {{movie.rent | currency:"$":0}}</a>
+		</div>
+	</div>
+</div>

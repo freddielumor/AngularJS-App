@@ -1,0 +1,19 @@
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+.poster {
+  height: 200px !important;
+}
+.thumbnail {
+  border : 1px solid #7f8c8d !important;
+}
+body {
+
+}
+.storyline {
+  margin-top : 0px;
+  text-decoration : underline;
+}
+.submit-button {
+  margin-top : 10px;
+}

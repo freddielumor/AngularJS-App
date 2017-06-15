@@ -1,0 +1,35 @@
+<div id="confirm.html">
+  <ol class="breadcrumb">
+    <li><a href="home">Home</a></li>
+    <li><a href="confirm">Buy {{selectedMovie.name}}</a></li>
+  </ol>
+  <h2>{{status === 'buy' ? 'Confirm DVD purchase':'Confirm rental purchase'}}</h2>
+  <hr />
+  <div class="row">
+    <div class="col-lg-3"><img ng-src={{selectedMovie.image}}>
+      <h4>{{selectedMovie.name}}</h4>
+    </div>
+    <div class="col-lg-6">
+      <h4 class="storyline">Storyline</h4>
+      <p>{{selectedMovie.storyline}}</p></div>
+      <div class="col-lg-3">
+        <div class="row">
+          <div class="col-lg-6">Price :</div>
+          <div class="col-lg-6"><span class="pull-right">{{status==='buy'?selectedMovie.buy:selectedMovie.rent}}</span></div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6">shipping :</div>
+          <div class="col-lg-6"><span class="pull-right">{{shipping | currency}}</span></div>
+        </div>
+        <hr />
+        <div class="row">
+          <div class="col-lg-6">Total :</div>
+          <div class="col-lg-6"><span class="pull-right">{{status==='buy'?selectedMovie.buy + shipping :selectedMovie.rent + shipping | currency}}</span></div>
+        </div>
+        <hr />
+        <div class="row">
+          <div class="col-lg-12"><button class="btn btn-primary pull-right" ng-click="checkout()">checkout</button></div>
+        </div>
+      </div>
+    </div>
+</div>
